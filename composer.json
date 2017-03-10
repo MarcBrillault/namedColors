@@ -1,0 +1,12 @@
+{
+    "name": "brio/named-colors",
+    "description": "Find a color's hexadecimal value from its name",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Brillault",
+            "email": "marc@brillault.fr"
+        }
+    ],
+    "require": {}
+}
