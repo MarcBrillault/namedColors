@@ -1,12 +1,18 @@
 {
-    "name": "brio/named-colors",
-    "description": "Find a color's hexadecimal value from its name",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Marc Brillault",
-            "email": "marc@brillault.fr"
-        }
-    ],
-    "require": {}
+  "name": "brio/named-colors",
+  "description": "Find a color's hexadecimal value from its name",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Marc Brillault",
+      "email": "marc@brillault.fr"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-0": {
+      "Brio/NamedColors": "src/"
+    }
+  }
 }
