@@ -8,6 +8,7 @@
  * The colors are used in architecture, construction, industry and road safety.
  *
  * @see https://www.w3schools.com/colors/colors_ral.asp
+ * @see https://en.wikipedia.org/wiki/RAL_colour_standard
  */
 
 $colors = [
