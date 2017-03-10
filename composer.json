@@ -8,7 +8,7 @@
       "email": "marc@brillault.fr"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "require": {
     "php": ">=5.3.0"
   },
@@ -19,7 +19,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0.0-dev"
+      "dev-master": "1.0.0"
     }
   }
 }
