@@ -1,12 +1,12 @@
 <?php
 
-namespace Brio;
+namespace Brio\NamedColors;
 
-class NamedColors
+class Colors
 {
     private static $_instance          = null;
     private        $_colorsClassesPath = __DIR__ . '/colors/';
-    private        $_colors            = [];
+    public         $colors             = [];
 
     /**
      * Returns an array with the color information if the color is found
@@ -20,15 +20,15 @@ class NamedColors
     {
         $self = self::_getInstance();
         if ($index === null) {
-            foreach ($self->_colors as $colorFamily => $colors) {
+            foreach ($self->colors as $colorFamily => $colors) {
                 foreach ($colors as $colorName => $colorData) {
                     if ($name == $colorName || $name == $colorData['name'] || $name == $colorData['reference']) {
                         return $colorData;
                     }
                 }
             }
-        } elseif (array_key_exists($index, $self->_colors)) {
-            foreach ($self->_colors[$index] as $colorName => $colorData) {
+        } elseif (array_key_exists($index, $self->colors)) {
+            foreach ($self->colors[$index] as $colorName => $colorData) {
                 if ($name == $colorName || $name == $colorData['name'] || $name == $colorData['reference']) {
                     return $colorData;
                 }
@@ -55,8 +55,6 @@ class NamedColors
 
     /**
      * NamedColors constructor.
-     *
-     * @return void
      */
     private function __construct()
     {
@@ -65,9 +63,7 @@ class NamedColors
     }
 
     /**
-     * This method's singleton
-     *
-     * @return \Brio\NamedColors
+     * @return \Brio\NamedColors\Colors
      */
     private static function _getInstance()
     {
@@ -80,8 +76,6 @@ class NamedColors
 
     /**
      * Creates the main $_colors array, from the files found in the colors directory
-     *
-     * @return void
      */
     private function _createColorsArray()
     {
@@ -93,7 +87,7 @@ class NamedColors
                 $name = $pathinfo['filename'];
                 include($this->_colorsClassesPath . $file);
                 if (isset($colors) && is_array($colors)) {
-                    $this->_colors[$name] = $colors;
+                    $this->colors[$name] = $colors;
                 }
             }
         }
@@ -107,12 +101,12 @@ class NamedColors
      */
     private function _setFirst($key)
     {
-        if (empty($this->_colors) || !array_key_exists($key, $this->_colors)) {
+        if (empty($this->colors) || !array_key_exists($key, $this->colors)) {
             return;
         }
 
-        $tmp = $this->_colors[$key];
-        unset($this->_colors[$key]);
-        $this->_colors = array_merge([$key => $tmp], $this->_colors);
+        $tmp = $this->colors[$key];
+        unset($this->colors[$key]);
+        $this->colors = array_merge([$key => $tmp], $this->colors);
     }
 }
