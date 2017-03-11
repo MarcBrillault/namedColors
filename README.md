@@ -31,7 +31,7 @@ use Brio\NamedColors;
 // Note that, if multiple matches are possible, the first match is returned
 // html colors are always first to be matched
 $color = NamedColors::findHexByName('red'); // returns #FF0000
-$color = Colors::findHexByName('Google Red'); // returns #EA4335
+$color = NamedColors::findHexByName('Google Red'); // returns #EA4335
 
 // Find a color from its name, with a specific color set
 $color = NamedColors::findHexByName('red', 'xkcd'); // returns #E50000
