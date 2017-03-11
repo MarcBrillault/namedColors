@@ -1,6 +1,6 @@
-# namedColors
+# NamedColors
 
-Find a colo'rs hexadecimal value from its name.
+Find a color's hexadecimal value from its name.
 
 This library does not only list all the HTML colors, but also :
 
@@ -25,16 +25,16 @@ composer require brio/named-colors
 ## Usage
 
 ```php
-use Brio\NamedColors\Colors;
+use Brio\NamedColors;
 
 // Find a color from its name or reference
 // Note that, if multiple matches are possible, the first match is returned
 // html colors are always first to be matched
-$color = Colors::findHexByName('red'); // returns #FF0000
+$color = NamedColorsColors::findHexByName('red'); // returns #FF0000
 $color = Colors::findHexByName('Google Red'); // returns #EA4335
 
 // Find a color from its name, with a specific color set
-$color = Colors::findHexByName('red', 'xkcd'); // returns #E50000
+$color = NamedColorsColors::findHexByName('red', 'xkcd'); // returns #E50000
 ```
 
 ## Contributing
