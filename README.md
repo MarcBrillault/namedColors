@@ -14,7 +14,7 @@ This library does not only list all the HTML colors, but also :
 - [X11 colors](https://en.wikipedia.org/wiki/X11_color_names)
 - and some other colors (Crayola colors, food colors, and even [XKCD's colors from its 2010 survey](https://blog.xkcd.com/2010/05/03/color-survey-results/))
 
-## Installation
+# Installation
 
 With composer :
 
@@ -22,7 +22,7 @@ With composer :
 composer require brio/named-colors
 ```
 
-## Usage
+# Usage
 
 ```php
 use Brio\NamedColors;
@@ -37,7 +37,7 @@ $color = NamedColors::findHexByName('Google Red'); // returns #EA4335
 $color = NamedColors::findHexByName('red', 'xkcd'); // returns #E50000
 ```
 
-## Contributing
+# Contributing
 
 Feel free to add your own color schemes, as soon as they meet these requirements :
  
@@ -50,3 +50,7 @@ Feel free to add your own color schemes, as soon as they meet these requirements
  - The key should be a camelCase version of the color's name
  - `reference` and `name` are not mandatory
  - The `hexa` key is mandatory, it should contain the hexadecimal value of the color, prefixed with a sharp (`#`).
+ 
+ # Credit
+ 
+ The first release's colors all come from the [W3Schools](https://www.w3schools.com/colors/colors_names.asp) website, thanks to them !
