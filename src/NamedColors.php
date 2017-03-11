@@ -1,8 +1,8 @@
 <?php
 
-namespace Brio\NamedColors;
+namespace Brio;
 
-class Colors
+class NamedColors
 {
     private static $_instance          = null;
     private        $_colorsClassesPath = __DIR__ . '/colors/';
@@ -63,7 +63,7 @@ class Colors
     }
 
     /**
-     * @return \Brio\NamedColors\Colors
+     * @return \Brio\NamedColors
      */
     private static function _getInstance()
     {
