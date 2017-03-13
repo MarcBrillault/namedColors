@@ -51,6 +51,6 @@ Feel free to add your own color schemes, as soon as they meet these requirements
  - `reference` and `name` are not mandatory
  - The `hexa` key is mandatory, it should contain the hexadecimal value of the color, prefixed with a sharp (`#`).
  
- # Credit
+# Credit
  
  The first release's colors all come from the [W3Schools](https://www.w3schools.com/colors/colors_names.asp) website, thanks to them !
